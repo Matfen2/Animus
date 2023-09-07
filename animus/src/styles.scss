@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    display: block;
+}
+
+// MIXIN & ROOT
+@mixin flex ($flexDirection) {
+    display: flex;
+    align-items: center;
+    flex-direction: $flexDirection;
+}
+
+$firstColor: azure;
+
+// MAIN-PAGE
+.show {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/videoGameBackground.jpg');
+    .contain {
+        .navbar {
+            @include flex (row);
+            justify-content: space-between;
+            .navbar-brand {
+                .img-fluid {
+                    height: 150px;
+                    max-width: 200px;
+                }
+            }
+            #btnBars {
+                display: none;
+                font-size: 1.3em;
+                color: $firstColor;
+                border: transparent;
+                background: transparent;
+            }
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 20px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.4em;
+                        color: $firstColor;
+                        text-shadow: 2px 0px 4px #000000;
+                    }
+                }
+            }
+        }
+        .listMachine {
+            margin: 702px auto;
+            .row {
+                .console {
+                    .img-fluid {
+                        cursor: pointer;
+                        opacity: 0.75;
+                        padding: -20px;
+                        height: 170px;
+                        max-width: 690px;
+                        &:hover {
+                            opacity: 1.0;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

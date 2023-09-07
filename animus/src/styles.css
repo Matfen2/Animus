@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+.show {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/picts/videoGameBackground.jpg");
+}
+.show .contain .navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.show .contain .navbar .navbar-brand .img-fluid {
+  height: 150px;
+  max-width: 200px;
+}
+.show .contain .navbar #btnBars {
+  display: none;
+  font-size: 1.3em;
+  color: azure;
+  border: transparent;
+  background: transparent;
+}
+.show .contain .navbar .navbar-nav {
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  margin-right: 20px;
+}
+.show .contain .navbar .navbar-nav .nav-item .nav-link {
+  font-size: 1.4em;
+  color: azure;
+  text-shadow: 2px 0px 4px #000000;
+}
+.show .contain .listMachine {
+  margin: 702px auto;
+}
+.show .contain .listMachine .row .console .img-fluid {
+  cursor: pointer;
+  opacity: 0.75;
+  padding: -20px;
+  height: 170px;
+  max-width: 690px;
+}
+.show .contain .listMachine .row .console .img-fluid:hover {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */
