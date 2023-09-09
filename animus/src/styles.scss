@@ -28,9 +28,12 @@ $firstColor: azure;
             @include flex (row);
             justify-content: space-between;
             .navbar-brand {
-                .img-fluid {
-                    height: 150px;
-                    max-width: 200px;
+                .logo {
+                    font-size: 2.4em;
+                    margin-left: 15px;
+                    color: $firstColor;
+                    font-family: ursula;
+                    text-shadow: 0px 0px 4px rgba(166,0,0,0.99);
                 }
             }
             #btnBars {
@@ -41,19 +44,21 @@ $firstColor: azure;
                 background: transparent;
             }
             .navbar-nav {
-                column-gap: 60px;
+                column-gap: 180px;
                 margin-right: 20px;
                 .nav-item {
                     .nav-link {
+                        margin-left: 90px;
                         font-size: 1.4em;
                         color: $firstColor;
+                        font-family: aeros;
                         text-shadow: 2px 0px 4px #000000;
                     }
                 }
             }
         }
         .listMachine {
-          margin-top: 873px;
+          margin-top: 847px;
             text-align: center;
             .row {
                 .console {
@@ -81,10 +86,12 @@ $firstColor: azure;
             @include flex (row);
             justify-content: space-between;
             .navbar-brand {
-                .img-fluid {
-                    height: 150px;
-                    cursor: pointer;
-                    max-width: 200px;
+                .logo {
+                    font-size: 2.4em;
+                    margin-left: 15px;
+                    color: $firstColor;
+                    font-family: ursula;
+                    text-shadow: 0px 0px 4px rgba(166,0,0,0.99);
                 }
             }
             #btnBars {
@@ -99,7 +106,9 @@ $firstColor: azure;
                 margin-right: 20px;
                 .nav-item {
                     .nav-link {
+                        margin-left: 90px;
                         font-size: 1.4em;
+                        font-family: aeros;
                         color: $firstColor;
                         text-shadow: 2px 0px 4px #000000;
                     }
@@ -128,6 +137,7 @@ $firstColor: azure;
                         background: transparent;
                         border: 1px solid $firstColor;
                         .hrefBuy {
+                            font-family: aeros;
                             font-size: 1.2em;
                             font-weight: bold;
                             color: $firstColor;
@@ -146,6 +156,7 @@ $firstColor: azure;
                     .caractere {
                         margin-top: 12px;
                         .features {
+                        font-family: aeros;
                         font-size: 1.5em;
                         color: $firstColor;
                         }
@@ -156,6 +167,7 @@ $firstColor: azure;
                         }
                     }
                     .strong {
+                        font-family: aeros;
                         font-size: 1.5em;
                         color: $firstColor;
                     }
@@ -182,10 +194,12 @@ $firstColor: azure;
             margin-top: 30px;
             text-align: center;
             .exclusif {
+                letter-spacing: 2px;
                 font-size: 1.4em;
                 font-weight: bold;
                 color: $firstColor;
                 margin-bottom: 14px;
+                font-family: aeros;
             }
             .row {
                 align-items: center;
@@ -194,6 +208,7 @@ $firstColor: azure;
                 .game {
                     max-width: 250px;
                     .img-fluid {
+                        cursor: pointer;
                         height: 300px;
                     }
                 }
@@ -217,7 +232,7 @@ $firstColor: azure;
 
 // SIDECANVAS
 #sideCanvas {
-    max-width: 150px;
+    max-width: 180px;
     height: 165px;
     border: 1px solid $firstColor;
     border-radius: 0px 0px 0px 40px;
@@ -242,13 +257,25 @@ $firstColor: azure;
                 text-align: center;
                 .nav-item {
                     .nav-link {
-                        font-size: 1.1em;
+                        font-family: aeros;
+                        font-size: 0.9em;
                         color: $firstColor;
                     }
                 }
             }
         }
     }
+}
+
+// FONTS
+@font-face {
+    font-family: ursula;
+    src: url('/assets/fonts/ursula.ttf');
+}
+
+@font-face {
+    font-family: aeros;
+    src: url('/assets/fonts/aeros.ttf');
 }
 
 // MEDIA-QUERRY
@@ -354,8 +381,64 @@ $firstColor: azure;
     }
 }
 
+@media screen and (max-width: 375px) {
+    .universConsole {
+        .contain {
+            .showConsole {
+                .row {
+                    .console {
+                        .nameConsole {
+                            font-size: 1.6em;
+                        }
+                    }
+                }
+            }
+            .describeConsole {
+                .row {
+                    .marketing {
+                        .caractere {
+                            .features {
+                                font-size: 1.2em;
+                            }
+                        }
+                        .strong {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 320px) {
     .show {
         width: 104%;
+        .contain {
+            .navbar {
+                .navbar-brand {
+                    .logo {
+                        font-size: 1.8em;
+                    }
+                }
+                #btnBars {
+                    margin-top: -15px;
+                }
+            }
+        }
+    }
+    .universConsole {
+        .contain {
+            .navbar {
+                .navbar-brand {
+                    .logo {
+                        font-size: 1.8em;
+                    }
+                }
+                #btnBars {
+                    margin-top: -15px;
+                }
+            }
+        }
     }
 }

@@ -21,9 +21,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.show .contain .navbar .navbar-brand .img-fluid {
-  height: 150px;
-  max-width: 200px;
+.show .contain .navbar .navbar-brand .logo {
+  font-size: 2.4em;
+  margin-left: 15px;
+  color: azure;
+  font-family: ursula;
+  text-shadow: 0px 0px 4px rgba(166, 0, 0, 0.99);
 }
 .show .contain .navbar #btnBars {
   display: none;
@@ -33,17 +36,19 @@ body {
   background: transparent;
 }
 .show .contain .navbar .navbar-nav {
-  -moz-column-gap: 60px;
-       column-gap: 60px;
+  -moz-column-gap: 180px;
+       column-gap: 180px;
   margin-right: 20px;
 }
 .show .contain .navbar .navbar-nav .nav-item .nav-link {
+  margin-left: 90px;
   font-size: 1.4em;
   color: azure;
+  font-family: aeros;
   text-shadow: 2px 0px 4px #000000;
 }
 .show .contain .listMachine {
-  margin-top: 873px;
+  margin-top: 847px;
   text-align: center;
 }
 .show .contain .listMachine .row .console {
@@ -68,10 +73,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.universConsole .contain .navbar .navbar-brand .img-fluid {
-  height: 150px;
-  cursor: pointer;
-  max-width: 200px;
+.universConsole .contain .navbar .navbar-brand .logo {
+  font-size: 2.4em;
+  margin-left: 15px;
+  color: azure;
+  font-family: ursula;
+  text-shadow: 0px 0px 4px rgba(166, 0, 0, 0.99);
 }
 .universConsole .contain .navbar #btnBars {
   display: none;
@@ -86,7 +93,9 @@ body {
   margin-right: 20px;
 }
 .universConsole .contain .navbar .navbar-nav .nav-item .nav-link {
+  margin-left: 90px;
   font-size: 1.4em;
+  font-family: aeros;
   color: azure;
   text-shadow: 2px 0px 4px #000000;
 }
@@ -118,6 +127,7 @@ body {
   border: 1px solid azure;
 }
 .universConsole .contain .showConsole .row .console #btnBuy .hrefBuy {
+  font-family: aeros;
   font-size: 1.2em;
   font-weight: bold;
   color: azure;
@@ -134,6 +144,7 @@ body {
   margin-top: 12px;
 }
 .universConsole .contain .describeConsole .row .marketing .caractere .features {
+  font-family: aeros;
   font-size: 1.5em;
   color: azure;
 }
@@ -143,6 +154,7 @@ body {
   color: azure;
 }
 .universConsole .contain .describeConsole .row .marketing .strong {
+  font-family: aeros;
   font-size: 1.5em;
   color: azure;
 }
@@ -165,10 +177,12 @@ body {
   text-align: center;
 }
 .universConsole .contain .gamesExclusives .exclusif {
+  letter-spacing: 2px;
   font-size: 1.4em;
   font-weight: bold;
   color: azure;
   margin-bottom: 14px;
+  font-family: aeros;
 }
 .universConsole .contain .gamesExclusives .row {
   align-items: center;
@@ -179,6 +193,7 @@ body {
   max-width: 250px;
 }
 .universConsole .contain .gamesExclusives .row .game .img-fluid {
+  cursor: pointer;
   height: 300px;
 }
 .universConsole .contain .gamesExclusives #btnSeeGames {
@@ -196,7 +211,7 @@ body {
 }
 
 #sideCanvas {
-  max-width: 150px;
+  max-width: 180px;
   height: 165px;
   border: 1px solid azure;
   border-radius: 0px 0px 0px 40px;
@@ -224,10 +239,19 @@ body {
   text-align: center;
 }
 #sideCanvas .offcanvas-body .navbar .navbar-nav .nav-item .nav-link {
-  font-size: 1.1em;
+  font-family: aeros;
+  font-size: 0.9em;
   color: azure;
 }
 
+@font-face {
+  font-family: ursula;
+  src: url("/assets/fonts/ursula.ttf");
+}
+@font-face {
+  font-family: aeros;
+  src: url("/assets/fonts/aeros.ttf");
+}
 @media screen and (max-width: 1440px) {
   .show {
     height: 120vh;
@@ -282,8 +306,31 @@ body {
     margin-top: -10px;
   }
 }
+@media screen and (max-width: 375px) {
+  .universConsole .contain .showConsole .row .console .nameConsole {
+    font-size: 1.6em;
+  }
+  .universConsole .contain .describeConsole .row .marketing .caractere .features {
+    font-size: 1.2em;
+  }
+  .universConsole .contain .describeConsole .row .marketing .strong {
+    font-size: 1.2em;
+  }
+}
 @media screen and (max-width: 320px) {
   .show {
     width: 104%;
+  }
+  .show .contain .navbar .navbar-brand .logo {
+    font-size: 1.8em;
+  }
+  .show .contain .navbar #btnBars {
+    margin-top: -15px;
+  }
+  .universConsole .contain .navbar .navbar-brand .logo {
+    font-size: 1.8em;
+  }
+  .universConsole .contain .navbar #btnBars {
+    margin-top: -15px;
   }
 }/*# sourceMappingURL=styles.css.map */
